@@ -62,7 +62,9 @@
     "description": "Template project for OpenShift console plugins. Edit package.json to change this message and the plugin name.",
     "exposedModules": {
       "ExamplePage": "./components/ExamplePage",
-      "DesignPatterns": "./components/DesignPatterns"
+      "DesignPatterns": "./components/DesignPatterns",
+      "DetailedView":"./components/DetailedView",
+      "AcsView":"./components/AcsView"
     },
     "dependencies": {
       "@console/pluginAPI": "*"

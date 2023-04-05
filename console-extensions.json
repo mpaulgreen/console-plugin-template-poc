@@ -16,6 +16,22 @@
     }
   },
   {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/detailedview",
+      "component": { "$codeRef": "DetailedView" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/acsview",
+      "component": { "$codeRef": "AcsView" }
+    }
+  },
+  {
     "type": "console.navigation/href",
     "properties": {
       "id": "example",
@@ -35,7 +51,16 @@
       "section": "test"
     }
   },
-
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "acsview",
+      "name": "ACS Security",
+      "href": "/acsview",
+      "perspective": "admin",
+      "section": "test"
+    }
+  },
   {
     "type": "console.navigation/section",
     "properties": {
