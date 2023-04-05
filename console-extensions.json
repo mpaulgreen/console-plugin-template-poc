@@ -8,13 +8,41 @@
     }
   },
   {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/designpatterns",
+      "component": { "$codeRef": "DesignPatterns" }
+    }
+  },
+  {
     "type": "console.navigation/href",
     "properties": {
       "id": "example",
       "name": "Plugin Example",
       "href": "/example",
       "perspective": "admin",
-      "section": "home"
+      "section": "test"
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "designpatterns",
+      "name": "Mriganka's Design Patterns",
+      "href": "/designpatterns",
+      "perspective": "admin",
+      "section": "test"
+    }
+  },
+
+  {
+    "type": "console.navigation/section",
+    "properties": {
+      "id": "test",
+      "name": "console-plugin-template",
+      "perspective": "admin"
     }
   }
+
 ]
