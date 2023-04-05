@@ -173,3 +173,33 @@ break console styles!
 - [Console Plugin SDK README](https://github.com/openshift/console/tree/master/frontend/packages/console-dynamic-plugin-sdk)
 - [Customization Plugin Example](https://github.com/spadgett/console-customization-plugin)
 - [Dynamic Plugin Enhancement Proposal](https://github.com/openshift/enhancements/blob/master/enhancements/console/dynamic-plugins.md)
+
+
+# Mriganka's POC
+## Getting started on the second sample
+
+```
+git clone https://github.com/jchraibi/console-plugin-template.git
+cd console-plugin-template/
+yarn install
+yarn start run
+```
+
+### On second terminal
+```
+sudo yarn run start-console
+```
+
+### Reference
+[Redhat sample](https://github.com/jchraibi/console-plugin-template)
+
+
+### Deploying on openshift
+```
+oc process -f manifest.yaml \
+  -p IMAGE=quay.io/mpaulgreen/console-plugin-template:0.0.1 \
+  | oc create -f -
+```
+```
+oc patch consoles.operator.openshift.io cluster \
+  --patch '{ "spec": { "plugins": ["console-customization-plugin"] } }' --type=merge
